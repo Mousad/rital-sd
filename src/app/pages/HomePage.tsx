@@ -276,11 +276,11 @@ export function HomePage() {
       <WhyTrueUniv />
       
       <ChatBot />
-      {/* <AboutSection /> */}
+      <AboutSection />
    
       {/* <ConsultationCTA /> */}
       {/* <TeamSection /> */}
-      {/* <TestimonialsSection /> */}
+      <TestimonialsSection />
     
       <ContactSection />
      {/* ======= سكشن موقعنا ======= */}
