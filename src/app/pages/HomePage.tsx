@@ -276,9 +276,9 @@ export function HomePage() {
       <WhyTrueUniv />
       
       <ChatBot />
-      <AboutSection />
+      {/* <AboutSection /> */}
    
-      {/* <ConsultationCTA /> */}
+      <ConsultationCTA />
       {/* <TeamSection /> */}
       <TestimonialsSection />
     

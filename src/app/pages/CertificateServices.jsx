@@ -80,7 +80,7 @@ export default function CertificateServices() {
 
           <div className="flex-1 text-center md:text-right bg-[#f2f9f5]">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 ">
-              <span className="text-[#154734]">خدمات ريتال التعليمية</span>
+              <span className="text-[#154734]">ريتال لاستخراج الشهادات المعتمدة</span>
             </h2>
 
             <p className="text-gray-700 text-lg leading-relaxed">

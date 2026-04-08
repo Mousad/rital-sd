@@ -12,7 +12,7 @@ import UniversityDetail from "./pages/UniversityDetail";
 import ConsultationPage from "./pages/ConsultationPage";
 import CertificateServices from "./pages/CertificateServices";
 import ScrollToTop from "./components/ScrollToTop"; // استدعاء المكون الجديد
-import StudyAbroad from "./pages/StudyAbroad";
+
 import StudyInEgypt from "./pages/StudyInEgypt";
 import StudyChina from "./pages/StudyChina";
 export default function App() {
@@ -34,7 +34,7 @@ export default function App() {
         <Route path="/services/consultation" element={<ConsultationPage />} />
         <Route path="/services/certificateservices" element={<CertificateServices />} />
         <Route path="/about" element={<AboutPage />} />
-         <Route path="/study-abroad" element={<StudyAbroad />} />
+     
         <Route path="/universities/:id" element={<UniversityDetail />} />
       </Routes>
 

@@ -29,6 +29,8 @@ const majors = [
   },
 ];
 
+
+
 /* الخطوات */
 const steps = [
   {
@@ -89,14 +91,12 @@ export default function ScholarshipsPage() {
 
       {/* الهيدر */}
       <div
-        className="w-full h-96 bg-cover bg-center relative flex items-center justify-center"
+        className="w-full h-86 bg-cover bg-center relative flex items-center justify-center"
         style={{ backgroundImage: `url(${images[currentImage]})` }}
       >
         <div className="absolute inset-0 bg-black/40"></div>
 
-        {/* <h1 className="text-white text-4xl font-bold relative z-10 text-center">
-          الدراسية في الصين 
-        </h1> */}
+       
       </div>
 
       {/* التعريف */}
@@ -105,13 +105,14 @@ export default function ScholarshipsPage() {
 
           <div className="text-right space-y-6">
             <h2 className="text-3xl font-bold text-[#154734]">
-              ادرس في مصر وابدأ رحلتك
+             حقق حلمك بالدراسة في الصين
             </h2>
 
             <p className="text-gray-600">
-              توفر لك مصر تجربة تعليمية مميزة تجمع بين جودة التعليم
-              وتكاليف مناسبة للطلاب الدوليين.
-            </p>
+  استمتع بتجربة تعليمية مميزة في الصين
+   حيث يجتمع التعليم عالي الجودة مع
+  التكاليف المناسبة، لتبدأ رحلتك الدراسية بثقة نحو مستقبل أفضل.
+</p>
 
             <a
               href="https://wa.me/201080016496"
@@ -132,6 +133,8 @@ export default function ScholarshipsPage() {
 
         </div>
       </section>
+
+   
 
       {/* الخطوات */}
       <section className="py-16 text-center">
@@ -158,6 +161,32 @@ export default function ScholarshipsPage() {
           </Link>
         </div>
       </section>
+
+          <div className="diagonal-container">
+
+      {/* TOP (Winter) */}
+      <div className="section top">
+        <img src="https://www.mie-study.net/assets/winter-jByLzEJn.webp" alt="Winter" />
+        <div className="overlay winter">
+          <div className="text">
+            <h2>WINTER CAMP</h2>
+            <p>Experience the Magic ❄️</p>
+          </div>
+        </div>
+      </div>
+
+      {/* BOTTOM (Summer) */}
+      <div className="section bottom">
+        <img src="	https://www.mie-study.net/assets/summer-N6M8h6Jb.webp" alt="Summer" />
+        <div className="overlay summer">
+          <div className="text">
+            <h2>SUMMER CAMP</h2>
+            <p>Adventure Awaits ☀️</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
 
       {/* التخصصات */}
       <section className="py-16 bg-white">

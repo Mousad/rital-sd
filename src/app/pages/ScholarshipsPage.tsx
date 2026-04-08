@@ -8,6 +8,7 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import UniversitiesSlider from "../components/niversitiesSlider";
 
 import card from "../pilden/card.png";
+import akib from "../pilden/akib.png";
 
 
 const majors = [
@@ -166,16 +167,16 @@ export function ScholarshipsPage() {
 />
        </div>
        <div className="flex justify-center gap-50 py-0">  
-  <div className="w-[2px] h-12 bg-[#154734]"></div>
+  <div className="w-[2px] h-12 bg-[#0d2b5e]"></div>
   
   {/* <div className="w-[2px] h-12 bg-[#ff3131]"></div> */}
-  <div className="w-[2px] h-12 bg-[#154734]"></div>
+  <div className="w-[2px] h-12 bg-[#0d2b5e]"></div>
        </div>
         
         <section className="py-0 bg-[#f2f9f5]" >
           <div className="container mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
             <div className="text-right space-y-6 ">                  
-         <h1 className="text-3xl text-center font-bold px-14 text-[#154734] border-2 border-[#154734] px-6 py-3 ">
+         <h1 className="text-3xl text-center font-bold px-14 text-[#0d2b5e] border-2 border-[#0d2b5e] px-6 py-3 ">
          منح ريتال التعليمية
          </h1>
  
@@ -226,62 +227,83 @@ export function ScholarshipsPage() {
     </div>
   </div>
       </section>
-      <section className="py-6 bg-[#f2f9f5]">
-  <div className="container mx-auto px-4">
 
-    <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-[#154734]">
-      أحدث المنح الدراسية
-    </h2>
+      <section className="py-6 flex justify-center bg-[#f2f9f5]">
+  <div className="relative w-[330px] h-[220px] rounded-3xl overflow-hidden shadow-xl">
 
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    {/* الصورة */}
+    <img
+      src="https://i.pinimg.com/736x/58/cb/bb/58cbbb978738541186bd85e374ece2fb.jpg"
+      alt="الدراسة في الصين"
+      className="w-full h-full object-cover"
+    />
 
-      {scholarships.map((item, index) => (
-        <div
-          key={index}
-          className={`bg-white rounded-xl overflow-hidden shadow hover:shadow-lg transition group 
-          ${index === 0 ? "col-span-2" : ""}`}
-        >
+    {/* طبقة تغميق */}
+    <div className="absolute inset-0 bg-black/40"></div>
 
-          {/* الصورة */}
-          <a href={item.link}>
-            <img
-              src={item.image}
-              alt={item.title}
-              className={`w-full object-cover group-hover:scale-105 transition duration-300 
-              ${index === 0 ? "h-64" : "h-52"}`}
-            />
-          </a>
+    {/* النص في وسط الصورة */}
+    <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
 
-          {/* المحتوى */}
-          <div className="p-4 text-right">
+      <h2 className="text-3xl font-bold text-white mb-3">
+        الدراسة في الصين
+      </h2>
 
-            {/* الميتا */}
-            <div className="flex justify-between text-sm text-gray-500 mb-2">
-              <span>{item.country}</span>
-              <span className="text-red-500 font-semibold">
-                {item.deadline}
-              </span>
-            </div>
+      <p className="text-sm text-gray-200 mb-6">
+        منصة ريتال تساعدك على اختيار أفضل الجامعات والمنح الدراسية في الصين
+        لتضمن مستقبلاً تعليمياً مشرقاً.
+      </p>
 
-            {/* العنوان */}
-            <h3 className="font-bold text-lg mb-2 hover:text-gray-600 transition">
-              {item.title}
-            </h3>
-
-            {/* الوصف */}
-            <p className="text-gray-600 text-sm line-clamp-2">
-              {item.description}
-            </p>
-
-          </div>
-
-        </div>
-      ))}
+      {/* الزر */}
+      <Link
+        to="/study-china"
+        className="bg-[#154734] hover:bg-[#0f3a2a] text-white px-6 py-2 rounded-full transition"
+      >
+        قدم
+      </Link>
 
     </div>
 
   </div>
-      </section>
+       </section>
+
+        <section className="py-10 flex justify-center bg-[#f2f9f5]">
+         <div className="relative bg-[#f2f9f5] rounded-3xl shadow-xl w-[330px] max-w-sm p-4 md:p-6 flex flex-col md:flex-col items-center text-right">
+       
+           {/* البوردر */}
+           <div className="absolute top-0 left-0 w-full h-full border-2 border-[#2f3b69] rounded-3xl pointer-events-none"></div>
+       
+           {/* الصورة + النص في صف واحد على الموبايل */}
+           <div className="flex flex-row items-center gap-4 mb-1 md:flex-col md:items-center">
+             {/* الصورة */}
+             <img
+               src={akib} // استبدل بالصورة عندك 
+               alt="الدراسة في مصر"
+               className="w-30 h-52 md:w-40 md:h-45 rounded-full object-cover border-4 border-white shadow-lg"
+             />
+       
+             {/* النص */}
+             <div className="flex-1 text-right">
+               <h2 className="text-lg md:text-2xl font-bold text-[#0d2b5e]">
+                 الدراسة في مصر
+               </h2>
+               <p className="text-sm md:text-base text-gray-700 mt-1 ">
+                 منصة ريتال تساعدك على اختيار أفضل الجامعات والمنح الدراسية في مصر، لتضمن مستقبلاً تعليمياً مشرقاً.
+               </p>
+               <div className="-mt-1 py-3 md:mt-1  z-10 ">
+             <Link
+               to="/study-egypt"
+               className="relative group top-6 z-10 bg-[#154734] overflow-hidden px-8  rounded-full   text-[#f2f9f5] font-medium"
+             >
+               <span className="absolute inset-0  z-10  origin-bottom rounded-full  transition-transform "></span>
+               <span className="relative z-10 group-hover:text-white right-14 transition">
+                 اكتشف
+               </span>
+             </Link>
+           </div>
+             </div>
+           </div>
+         </div>
+             </section>
       
 
 

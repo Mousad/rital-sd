@@ -206,7 +206,7 @@ export default function ScholarshipsPage() {
   };
 
   return (
-    <section className="bg-[#f2f9f5]">
+    <section className="bg-[#]">
 
       {/* الهيدر */}
       <div
@@ -220,15 +220,15 @@ export default function ScholarshipsPage() {
        </div>
 
       {/* التعريف */}
-      <section className="py-16 bg-[#0d2b5e]">
+      <section className="py-16 bg-[#f2f9f5]">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
 
           <div className="text-right space-y-6">
-            <h2 className="text-3xl font-bold text-[#f2f9f5]">
+            <h2 className="text-3xl font-bold text-[#0d2b5e]">
              مستقبلك الأكاديمي في مصر
             </h2>
 
-            <p className="text-[#f2f9f5]">
+            <p className="text-[#0d2b5e]">
              رﻳﺘـ ﺎل ﻟﻠﺨﺪﻣﺎت اﻟﺘﻌﻠﻴﻤﻴﺔ ﻫﻲ اﻟﺬراع اﻷﻛﺎدﻳﻤﻲ ﻟﺸﺮﻛﺔ ﻧﻮﺑﺎﺗﻴﺎ ﻟﻠﺨﺪﻣﺎت اﻟﺘﻌﻠﻴﻤﻴﺔ،
 ﺗﺄﺳﺴﺖ ﻓﻲ ﻣﺼﺮ ﻋﺎم 2019، وأﺻﺒﺤﺖ اﻟﻴﻮم واﺣﺪة ﻣﻦ أﻛﺒﺮ وأﻗﻮى اﻟﻤﺆﺳﺴﺎت
 اﻟﺘﻌﻠﻴﻤﻴﺔ اﻟﻤﺘﺨﺼﺼﺔ ﻓﻲ ﺗﺄﻣﻴﻦ ﻓﺮص اﻟﺪراﺳﺔ ﺑﺎﻟﺨﺎرج ﻟﻠﻄﻼب اﻟﺴﻮداﻧﻴﻴﻦ.
@@ -246,115 +246,13 @@ export default function ScholarshipsPage() {
               className="w-80"
             />
           </div>
-          <div className="text-right space-y-1">
-            
-
-            
-
-            <a
-              href="https://wa.me/201080016496"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-[#154734] text-white px-6 py-3 rounded-lg hover:bg-[#123a2c]"
-            >
-              سجل الآن
-            </a>
-          </div>
+          
 
         </div>
       </section>
-   <section className="py-5 px-4 bg-[#0d2b5e]">
-  <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
-    الأوراق المطلوبة للتقديم في الجامعات
-  </h2>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 border-t border-white">
-    {documents.map((doc, idx) => (
-      <div
-        key={idx}
-        className="relative flex border-b border-white"
-      >
-        {/* الخط العمودي في المنتصف */}
-        <div className="absolute top-0 bottom-0 right-1/1 w-[1px] bg-white"></div>
-        <div className="absolute top-0 bottom-0 right-1/3 w-[1px] bg-white"></div>
-        <div className="absolute top-0 bottom-0 left-1/1 w-[1px] bg-white"></div>
-
-        <div className="w-1/2 p-1 flex items-center justify- text-[#d4aa6b] font-bold text-sm">
-          {doc.title}
-        </div>
-        <div className="w-1/1 p-2 flex items-center justify-center text-white text-sm">
-          {doc.desc}
-        </div>
-      </div>
-    ))}
-  </div>
-</section>
-
-<section className="py-10 px-4 bg-[#0d2b5e]">
-  <div className="relative max-w-3xl mx-auto">
-    {/* الخط العمودي على اليمين */}
-    <div className="absolute right-5 top-0 bottom-0 w-1 bg-blue-600/50"></div>
-
-    {stepks.map((step, index) => (
-      <div key={index} className="flex items-start mb-6 relative">
-        {/* الدائرة على الخط */}
-        <div className="absolute right-3 top-5 w-5 h-5 rounded-full border-2 border-blue-600 bg-white z-"></div>
-
-        {/* المحتوى يتحرك على الشمال */}
-        <div className={`mr-9 p-3 rounded-lg 
-            ${index % 2 === 0 ? 'bg-blue-600 text-white' : 'bg-yellow-200 text-[#1c2b50]'}`}>
-          <h3 className="font-bold text-lg mb-2">{step.title}</h3>
-          <p className="text-sm">{stepks.desc}</p>
-        </div>
-      </div>
-    ))}
-  </div>
-</section>
-
-
-
-
-
-         <section className="py-6 bg-[#0d2b5e] relative">
-      <div className="container mx-auto px-4">
-
-        {/* العنوان */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#f2f9f5] mb-6 tracking-tight">
-            خدماتنا المتكاملة
-          </h2>
-
-          <p className="text-lg text-[#f2f9f5] leading-relaxed font-light max-w-2xl mx-auto">
-            دعم شامل لضمان نجاح تقديمك للجامعات المصرية
-          </p>
-        </div>
-
-        {/* الخدمات */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="flex items-start gap-3 p-6 rounded-xl bg-white border border-gray-100 hover:border-green-200 transition-all duration-300 shadow-sm"
-            >
-
-              {/* الدائرة */}
-              <div className="w-2 h-2 rounded-full bg-green-500 mt-2.5 flex-shrink-0"></div>
-
-              <span className="text-gray-700 leading-relaxed">
-                {service}
-              </span>
-
-            </div>
-          ))}
-
-        </div>
-
-      </div>
-    </section>
-      {/* الخطوات */}
-     <section className="py-6 bg-[#0d2b5e] text-center">
-  <h2 className="text-3xl font-bold mb-10 text-[#f2f9f5]">
+      <section className="py-6 bg-[#f2f9f5] text-center">
+  <h2 className="text-3xl font-bold mb-10 text-[#0d2b5e]">
     خطوات الحصول على منحة
   </h2>
 
@@ -362,28 +260,61 @@ export default function ScholarshipsPage() {
   {steps.map((step, i) => (
     <div key={i} className="flex-1 mx-2 text-center">
       <img src={step.img} className="w-20 mx-auto mb-4" />
-      <h3 className="font-bold text-[#f2f9f5] text-lg">{step.title}</h3>
+      <h3 className="font-bold text-[#0d2b5e] text-lg">{step.title}</h3>
     </div>
   ))}
 </div>
 
 
-  <div className="mt-10">
+  <div className="mt-15">
     <Link
       to="/register"
-      className="bg-[#154734] text-white px-6 py-3 rounded-full"
+      className="bg-[#0d2b5e] text-white px-6 py-3 rounded-full"
     >
       سجل الآن
     </Link>
   </div>
 </section>
 
+<section className="py-10 relative bg-[#f2f9f5]">
+      <div className="container mx-auto px-4">
 
-      {/* التخصصات */}
-      <section className="py-10 bg-[#0d2b5e]">
+        {/* العنوان */}
+        <div className="text-[center] mb-8">
+          <h2 className="text-3xl md:text-2xl font-bold text-[#0d2b5e] mb-2 tracking-tight">
+            أنواع الجامعات المتاحة
+          </h2>
+          <p className="text-lg  text-[#0d2b5e] leading-relaxed font-light max-w-3xl mx-auto">
+            نغطي جميع أنواع الجامعات في مصر لنوفر لك أفضل الخيارات التعليمية
+          </p>
+        </div>
+
+        {/* البطاقات */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {universities.map((uni, idx) => (
+            <div
+              key={idx}
+              className="bg-white rounded-2xl p-4 border border-gray-200 hover:border-gray-300 transition-all duration-300 hover:scale-105"
+            >
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-[#feeaeb]/20 to-[#e9e8ee]/20 backdrop-blur-sm border border-gray-200 mb-">
+                  {uni.icon}
+                </div>
+                <div className="text-sm font-bold text-[#154734] mb-2">{uni.count}</div>
+                <h3 className="text-2xl font-bold text-[#0d2b5e] mb-4 tracking-tight">{uni.title}</h3>
+                <p className="text-gray-600 leading-relaxed font-light">{uni.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+
+    <section className="py-1 bg-[#f2f9f5]">
         <div className="container mx-auto px-4">
 
-          <h2 className="text-center  text-[#f2f9f5] text-3xl font-bold mb-10">
+          <h2 className="text-center  text-[#0d2b5e] text-3xl font-bold mb-10">
             أفضل التخصصات
           </h2>
 
@@ -401,7 +332,7 @@ export default function ScholarshipsPage() {
                   className="w-12 h-12 mx-auto mb-4"
                 />
 
-                <h3 className="font-bold">{major.title}</h3>
+                <h3 className="font-bold text-[#0d2b5e]">{major.title}</h3>
 
                 
               </a>
@@ -411,17 +342,68 @@ export default function ScholarshipsPage() {
         </div>
       </section>
 
-      <section className="py-10 relative bg-[#0d2b5e] overflow-hidden">
+   <section className="py-5 px-4 bg-[#f2f9f5]">
+  <h2 className="text-2xl md:text-3xl font-bold text-[#0d2b5e] text-center mb-8">
+    الأوراق المطلوبة للتقديم في الجامعات
+  </h2>
+
+ <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+  {documents.map((doc, idx) => (
+    <div
+      key={idx}
+      className="border border-[#0d2b5e] p-4 flex flex-col items-center justify-center"
+    >
+      <div className="text-[#0d2b5e] font-bold text-sm mb-2">
+        {doc.title}
+      </div>
+      <div className="text-[#0d2b5e] text-sm">
+        {doc.desc}
+      </div>
+    </div>
+  ))}
+</div>
+</section>
+
+<section className="py-20 text-center bg-[#f2f9f5]">
+        <div className="container mx-auto px-4">
+
+          <h2 className="text-3xl md:text-4xl font-bold text-[#154734] mb-6">
+            ابدأ رحلتك الجامعية في مصر
+          </h2>
+
+          <p className="text-lg text-gray-600 mb-8">
+            احصل على استشارة مجانية لاختيار الجامعة والتخصص المناسب
+          </p>
+
+          <a
+            href="/consultation"
+            className="bg-[#154734] text-white px-8 py-4 rounded-xl hover:opacity-90 transition"
+          >
+            احجز استشارة مجانية
+          </a>
+
+        </div>
+      </section>
+
+
+
+
+
+
+
+        
+      {/* الخطوات */}
+     <section className="py-10 relative bg-[#f2f9f5] overflow-hidden">
   <div className="absolute inset-0 bg opacity-30"></div>
 
   <div className="container mx-auto relative z- px-2">
 
     {/* العنوان */}
     <div className="text-center mb-16">
-      <h2 className="text-3xl md:text-4xl font-bold text-[#f2f9f5] mb-6 tracking-tight">
+      <h2 className="text-3xl md:text-4xl font-bold text-[#0d2b5e] mb-6 tracking-tight">
         خدمات تفصيلية
       </h2>
-      <p className="text-lg  text-[#f2f9f5] leading-relaxed font-light max-w-2xl mx-auto">
+      <p className="text-lg  text-[#0d2b5e] leading-relaxed font-light max-w-2xl mx-auto">
         نقدم مجموعة متكاملة من الخدمات المصممة خصيصًا لطلاب الجامعات المصرية
       </p>
     </div>
@@ -448,47 +430,58 @@ export default function ScholarshipsPage() {
   </div>
 </section>
 
-<section className="py-10 relative bg-[#0d2b5e]">
+
+      {/* التخصصات */}
+      
+
+       <section className="py-6 bg-[#f2f9f5] relative">
       <div className="container mx-auto px-4">
 
         {/* العنوان */}
-        <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-2xl font-bold text-[#f2f9f5] mb-2 tracking-tight">
-            أنواع الجامعات المتاحة
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0d2b5e] mb-6 tracking-tight">
+            خدماتنا المتكاملة
           </h2>
-          <p className="text-lg  text-[#f2f9f5] leading-relaxed font-light max-w-3xl mx-auto">
-            نغطي جميع أنواع الجامعات في مصر لنوفر لك أفضل الخيارات التعليمية
+
+          <p className="text-lg text-[#0d2b5e] leading-relaxed font-light max-w-2xl mx-auto">
+            دعم شامل لضمان نجاح تقديمك للجامعات المصرية
           </p>
         </div>
 
-        {/* البطاقات */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {universities.map((uni, idx) => (
+        {/* الخدمات */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          {services.map((service, index) => (
             <div
-              key={idx}
-              className="bg-white rounded-2xl p-4 border border-gray-200 hover:border-gray-300 transition-all duration-300 hover:scale-105"
+              key={index}
+              className="flex items-start gap-3 p-6 rounded-xl bg-white border border-gray-100 hover:border-[#0d2b5e] transition-all duration-300 shadow-sm"
             >
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-[#feeaeb]/20 to-[#e9e8ee]/20 backdrop-blur-sm border border-gray-200 mb-">
-                  {uni.icon}
-                </div>
-                <div className="text-sm font-bold text-[#16a085] mb-2">{uni.count}</div>
-                <h3 className="text-2xl font-bold text-[#0d2b5e] mb-4 tracking-tight">{uni.title}</h3>
-                <p className="text-gray-600 leading-relaxed font-light">{uni.desc}</p>
-              </div>
+
+              {/* الدائرة */}
+              <div className="w-2 h-2 rounded-full bg-[#0d2b5e] mt-2.5 flex-shrink-0"></div>
+
+              <span className="text-gray-700 leading-relaxed">
+                {service}
+              </span>
+
             </div>
           ))}
+
         </div>
 
       </div>
     </section>
 
+     
+
+
+
 
       {/* FAQ */}
-      <section className="py-10 bg-[#0d2b5e]">
+      <section className="py-10 bg-[#f2f9f5]">
         <div className="container mx-auto px-4">
 
-          <h2 className="text-3xl font-bold text-center mb-10 text-[#f2f9f5]">
+          <h2 className="text-3xl font-bold text-center mb-10 text-[#0d2b5e]">
             الأسئلة الشائعة
           </h2>
 
@@ -499,9 +492,9 @@ export default function ScholarshipsPage() {
 
                 <button
                   onClick={() => toggleFAQ(idx)}
-                  className="flex justify-between w-full items-center"
+                  className="flex justify-between w-full items-center text-[#154734]"
                 >
-                  <h3 className="font-bold text-[#154734]">
+                  <h3 className="font-bold text-[#0d2b5e]">
                     {faq.question}
                   </h3>
 

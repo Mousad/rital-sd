@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram, faYoutube, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 
@@ -23,17 +24,12 @@ export function Header() {
       label: "الخدمات",
       to: "/services",
       dropdown: [
-        { label: "خدمات عامة ", to: "#services" },
-        { label: "تقديم منح", to: "/services/scholarships/" },
-        { label: "استخرج شهادات ثانوي", to: "/services/certificate-services" },
-        
+        { label: "خدماتنا", to: "/services" },
+        { label: "تقديم منح", to: "/services/scholarships" },
+        { label: "استخرج شهادات ", to: "/services/certificate-services" },
       ],
     },
-    {
-     label: "الجامعات",
-  to: "/universities/1",
-      
-    },
+    { label: "الجامعات", to: "/universities/1" },
     { label: "من نحن", to: "/about" },
     { label: "البرامج", to: "#services" },
     { label: "مدوناتنا", to: "#testimonials" },
@@ -57,17 +53,15 @@ export function Header() {
           </button>
 
           {/* Logo */}
-          
-         <div className="flex items-center gap-3">
-  <a href="/" className="font-black text-xl" style={{ color: "#0d2b5e" }}>
-    <img
-      src="	https://rital-sd.com/lovable-uploads/a5c80a15-6935-45ec-8852-551e961cc11f.png"
-      alt="Rital"
-      className="h-16 w-auto object-contain"
-    />
-  </a>
-</div>
-
+          <div className="flex items-center gap-3">
+            <a href="/" className="font-black text-xl" style={{ color: "#0d2b5e" }}>
+              <img
+                src="https://rital-sd.com/lovable-uploads/a5c80a15-6935-45ec-8852-551e961cc11f.png"
+                alt="Rital"
+                className="h-16 w-auto object-contain"
+              />
+            </a>
+          </div>
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-4">
@@ -86,31 +80,12 @@ export function Header() {
                     <div className="absolute top-full left-0 mt-2 w-60 bg-white shadow-lg rounded-lg overflow-hidden z-50">
                       {link.dropdown.map((item) => (
                         <div key={item.label} className="relative group text-right">
-                          {item.subDropdown ? (
-                            <>
-                              <span className="block px-4 py-2 text-gray-700 cursor-pointer">
-                                {item.label}
-                              </span>
-                              <div className="absolute top-0 left-full ml-1 w-48 bg-white shadow-lg rounded-lg hidden group-hover:block z-50 text-right">
-                                {item.subDropdown.map((sub) => (
-                                  <Link
-                                    key={sub.id}
-                                    to={`/universities/${sub.id}`}
-                                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                                  >
-                                    {sub.label}
-                                  </Link>
-                                ))}
-                              </div>
-                            </>
-                          ) : (
-                            <Link
-                              to={item.to}
-                              className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                            >
-                              {item.label}
-                            </Link>
-                          )}
+                          <Link
+                            to={item.to}
+                            className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                          >
+                            {item.label}
+                          </Link>
                         </div>
                       ))}
                     </div>
@@ -177,37 +152,14 @@ export function Header() {
                 {openMobileDropdown === link.label && (
                   <div className="flex flex-col gap-2 pl-4 mt-2">
                     {link.dropdown.map((item) => (
-                      <div key={item.label}>
-                        <button
-                          className="flex justify-center items-center gap-1 py-3 px-4 rounded-xl font-semibold w-full hover:bg-white/20 active:underline"
-                          onClick={() =>
-                            setOpenMobileSubDropdown(
-                              openMobileSubDropdown === item.label
-                                ? null
-                                : item.label
-                            )
-                          }
-                        >
-                          {item.label}
-                          {item.subDropdown && <ChevronDown size={16} />}
-                        </button>
-
-                        {item.subDropdown &&
-                          openMobileSubDropdown === item.label && (
-                            <div className="grid grid-cols-1 gap-2 justify-center mt-1">
-                              {item.subDropdown.map((sub) => (
-                                <Link
-                                  key={sub.id}
-                                  to={`/universities/${sub.id}`}
-                                  className="py-2 px-2 rounded-lg hover:bg-white/20 text-center block"
-                                  onClick={() => setIsMenuOpen(false)}
-                                >
-                                  {sub.label}
-                                </Link>
-                              ))}
-                            </div>
-                          )}
-                      </div>
+                      <Link
+                        key={item.label}
+                        to={item.to}
+                        className="flex justify-center items-center gap-1 py-3 px-4 rounded-xl font-semibold w-full hover:bg-white/20 active:underline text-center"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
                     ))}
                   </div>
                 )}
@@ -225,26 +177,24 @@ export function Header() {
           )}
         </div>
 
-        {/* more-buttons ثابت أسفل الشاشة */}
-     <div className="flex items-center gap-6 justify-center py-6 text-2xl">
+        {/* Social Media Buttons ثابت أسفل الشاشة */}
+        <div className="flex items-center gap-6 justify-center py-6 text-2xl">
+          <a href="https://facebook.com" target="_blank">
+            <FontAwesomeIcon icon={faFacebook} />
+          </a>
 
-  <a href="https://facebook.com" target="_blank">
-    <FontAwesomeIcon icon={faFacebook} />
-  </a>
+          <a href="https://instagram.com" target="_blank">
+            <FontAwesomeIcon icon={faInstagram} />
+          </a>
 
-  <a href="https://instagram.com" target="_blank">
-    <FontAwesomeIcon icon={faInstagram} />
-  </a>
+          <a href="https://youtube.com" target="_blank">
+            <FontAwesomeIcon icon={faYoutube} />
+          </a>
 
-  <a href="https://youtube.com" target="_blank">
-    <FontAwesomeIcon icon={faYoutube} />
-  </a>
-
-  <a href="https://x.com" target="_blank">
-    <FontAwesomeIcon icon={faXTwitter} />
-  </a>
-
-</div>
+          <a href="https://x.com" target="_blank">
+            <FontAwesomeIcon icon={faXTwitter} />
+          </a>
+        </div>
       </div>
     </header>
   );

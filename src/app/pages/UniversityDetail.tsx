@@ -29,7 +29,7 @@ const majors = [
           link: "https://wa.me/+201117740555",
     },
     {
-      title: "إدارة الأعمال",
+      title: "إدارة ",
       img: "https://studyinegypt-alkayan.com/wp-content/uploads/2025/05/ادراة-الاعمال.png.webp",
        link: "https://wa.me/+201117740555",
     },
@@ -55,20 +55,8 @@ const universities = [
     image: "https://i.pinimg.com/736x/30/24/b9/3024b90dc872c7300a0abe0abef03c02.jpg",
     logo: "https://i.pinimg.com/1200x/f9/45/f5/f945f57c443bf37fb720228401bd605b.jpg",
   },
-  {
-    id: 3,
-    name: "جامعة الزقازيق",
-    location: "مصر - الزقازيق",
-    image: "https://admin.alkhawarizmi.ae/storage/317/20231227154517.jpg",
-    logo: "https://i.pinimg.com/736x/db/4e/ce/db4ece0cc59055d7443a4ccf37e2775a.jpg",
-  },
-  {
-    id: 4,
-    name: "جامعة حلوان",
-    location: "مصر - القاهرة",
-    image: "https://admin.alkhawarizmi-online.com//storage/268/20240101163814.jpeg",
-    logo: "https://i.pinimg.com/1200x/4a/41/21/4a4121562d70abd03bfcc835f7ef2804.jpg",
-  },
+ 
+ 
   {
     id: 5,
     name: "جامعة النيل",
@@ -260,19 +248,19 @@ export default function UniversityDetail() {
         <div className="container mx-auto px-4">
 
           {/* الجامعات */}
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid  grid-cols-2  md:grid-cols-3 gap-6">
 
             {currentUniversities.map((u) => (
               <div
                 key={u.id}
-                className="bg-white rounded-3xl shadow hover:shadow-xl transition overflow-hidden relative"
+                className="bg-white  hover:shadow-xl transition overflow-hidden relative"
               >
 
                 <div className="relative">
                   <img
                     src={u.image}
                     alt={u.name}
-                    className="w-full h-64 object-cover"
+                    className="w-full h-44 object-cover "
                   />
 
                   <img

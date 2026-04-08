@@ -1,5 +1,45 @@
 import { useState, useEffect } from "react";
+
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
+const simpleTestimonials = [
+  {
+    name: "أحمد عثمان",
+    image: "...",
+    text: "منصة رتال غيّرت مسار حياتي بالكامل. كنت أحلم بالدراسة في الخارج...",
+  },
+  {
+    name: "نور الحسن",
+    image: "...",
+    text: "ما يميز منصة رتال هو الاهتمام الشخصي بكل طالب...",
+  },
+];
+
+export function SimpleTestimonials() {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const t = setInterval(() => {
+      setCurrent((p) => (p + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(t);
+  }, []);
+
+  const t = testimonials[current];
+
+  return (
+    <section className="py-16 px-4 bg-[#f2f9f5] text-center">
+      <div className="max-w-xl mx-auto">
+        <img
+          src={t.image}
+          alt={t.name}
+          className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-2xl object-cover mb-6 border-4 border-white shadow-lg"
+        />
+        <p className="text-lg text-gray-700 italic mb-4">"{t.text}"</p>
+        <p className="text-xl font-bold text-gray-900">{t.name}</p>
+      </div>
+    </section>
+  );
+}
 
 const testimonials = [
   {
@@ -8,8 +48,8 @@ const testimonials = [
     university: "جامعة إسطنبول",
     major: "هندسة الحاسوب",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1747835945032-d8b34140bb51?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBcmFiJTIwc3R1ZGVudCUyMHlvdW5nJTIwbWFuJTIwc21pbGluZyUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NzIzOTE4MDl8MA&ixlib=rb-4.1.0&q=80&w=200",
-    text: "منصة رتال غيّرت مسار حياتي بالكامل. كنت أحلم بالدراسة في الخارج لكنني لم أكن أعرف من أين أبدأ. الفريق كان معي في كل خطوة من تجهيز الملفات حتى وصلت إسطنبول وبدأت دراستي. أنصح كل طالب عربي بالتواصل معهم.",
+    image: "https://i.pinimg.com/736x/f1/2f/37/f12f37a580349c171e0cb7ff6f3e8331.jpg",
+    text: "منصة رتال غيّرت مسار حياتي بالكامل. كنت أحلم بالدراسة في الخارج لكنني لم أكن أعرف من أين أبدأ. الفريق كان معي في كل خطو .",
     year: "2023",
   },
   {
@@ -18,8 +58,8 @@ const testimonials = [
     university: "جامعة بيلكنت",
     major: "إدارة الأعمال الدولية",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1758518727888-ffa196002e59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMHBvcnRyYWl0JTIwb2ZmaWNlJTIwZXhlY3V0aXZlfGVufDF8fHx8MTc3MjM5MTgxNHww&ixlib=rb-4.1.0&q=80&w=200",
-    text: "ما يميز منصة رتال هو الاهتمام الشخصي بكل طالب. لم أشعر يوماً أنني مجرد رقم بينهم. ساعدوني في الحصول على قبول في جامعة بيلكنت المرموقة ورتّبوا لي كل شيء من السكن لأوراق الإقامة. تجربة لا تُنسى!",
+    image: "https://i.pinimg.com/736x/9e/ed/64/9eed648cc2033c489d13f98fc11487cc.jpg",
+    text: "ما يميز منصة رتال هو الاهتمام الشخصي بكل طالب. لم أشعر يوماً أنني مجرد رقم بينهم. ساعدوني في الحصول على قبول في جامعة بيلكنت  !",
     year: "2024",
   },
   {
@@ -28,8 +68,8 @@ const testimonials = [
     university: "جامعة أنقرة",
     major: "الطب البشري",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1758599543154-76ec1c4257df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGV4ZWN1dGl2ZSUyMHByb2Zlc3Npb25hbCUyMG1hbiUyMHBvcnRyYWl0fGVufDF8fHx8MTc3MjM5MTgxMHww&ixlib=rb-4.1.0&q=80&w=200",
-    text: "كان حلمي الدراسة في كلية الطب التركية وقد حققته بفضل فريق رتال. ساعدوني في فهم متطلبات القبول وترجمة وثائقي وقدموا لي دعماً نفسياً ومعنوياً خلال فترة الانتظار. الآن أنا في السنة الثانية طب في أنقرة.",
+    image: "https://i.pinimg.com/736x/c4/28/02/c42802842e179d3b3b981ac44e4ded68.jpg",
+    text: "كان حلمي الدراسة في كلية الطب التركية وقد حققته بفضل فريق رتال. ساعدوني في فهم متطلبات القبول وترجمة وثائقي وقدموا لي دعماً نفسياً ومعنوياً خلال فترة .",
     year: "2023",
   },
   {
@@ -38,8 +78,8 @@ const testimonials = [
     university: "جامعة حاجتبه",
     major: "الهندسة الطبية الحيوية",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1704748082614-8163a88e56b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMHdvbWFuJTIwc3R1ZGVudCUyMHN0dWR5aW5nJTIwbGFwdG9wJTIwdW5pdmVyc2l0eXxlbnwxfHx8fDE3NzIzOTE4MTN8MA&ixlib=rb-4.1.0&q=80&w=200",
-    text: "خدمة احترافية بكل معنى الكلمة. المستشارة سارة التي تولّت ملفي كانت متاحة في أي وقت وأجابت على كل استفساراتي بصبر ودقة. أنهيت إجراءات القبول في ثلاثة أسابيع فقط!",
+    image: "https://i.pinimg.com/736x/05/6c/85/056c85d23f30445c4ad7889967e6d9a1.jpg",
+    text: "خدمة احترافية بكل معنى الكلمة. المستشارة سارة التي تولّت ملفي كانت متاحة في أي وقت وأجابت على كل استفساراتي !",
     year: "2024",
   },
   {
@@ -48,8 +88,8 @@ const testimonials = [
     university: "جامعة بوغازيتشي",
     major: "الذكاء الاصطناعي",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1585298799938-a15d7abb8523?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhY2FkZW1pYyUyMGNvdW5zZWxvciUyMG1lZXRpbmclMjBzdHVkZW50JTIwYWR2aXNpbmd8ZW58MXx8fHwxNzcyMzkxODE4fDA&ixlib=rb-4.1.0&q=80&w=200",
-    text: "جامعة بوغازيتشي كانت حلماً يبدو بعيد المنال، لكن منصة رتال جعلته حقيقة. ساعدوني في تجهيز ملف استثنائي وأجروا معي تدريبات على المقابلة. اليوم أنا طالب ماجستير في الذكاء الاصطناعي في واحدة من أرقى جامعات تركيا.",
+    image: "https://i.pinimg.com/736x/71/50/a2/7150a2361dcd4d85734b54b4049d6598.jpg",
+    text: "جامعة بوغازيتشي كانت حلماً يبدو بعيد المنال، لكن منصة رتال جعلته حقيقة. ساعدوني في تجهيز ملف استثنائي وأجروا معي تدريبات على المقابلة. اليوم .",
     year: "2024",
   },
 ];
@@ -75,7 +115,7 @@ export function TestimonialsSection() {
   const t = testimonials[current];
 
   return (
-    <section id="testimonials" className="py-20 px-4 bg-[#f2f9f5] overflow-hidden">
+    <section id="testimonials" className="py-9 px-4 bg-[#f2f9f5] overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
@@ -100,15 +140,11 @@ export function TestimonialsSection() {
             <div
               className="relative p-8 md:p-12 rounded-3xl shadow-xl"
               style={{
-                background: "linear-gradient(135deg, #0d2b5e 0%, #1e5799 100%)",
+                background: "linear-gradient(135deg, # 0%, #1e5799 100%)",
               }}
             >
               {/* Quote Icon */}
-              <div
-                className="absolute top-8 left-8 opacity-20"
-              >
-                <Quote size={50} className="text-white" />
-              </div>
+            
 
               <div className="flex flex-col md:flex-row gap-8 items-start relative z-10">
                 {/* Avatar */}
@@ -117,44 +153,24 @@ export function TestimonialsSection() {
                     <img
                       src={t.image}
                       alt={t.name}
-                      className="w-24 h-24 rounded-2xl object-cover border-4 border-white/20"
+                      className="w-88 h-74 rounded-2xl object-cover border-4 border-white/20"
                     />
-                    <div
-                      className="absolute -bottom-3 -right-3 w-8 h-8 rounded-full flex items-center justify-center text-sm"
-                      style={{ backgroundColor: "#c0392b" }}
-                    >
-                      ✓
-                    </div>
+                   
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="flex-1">
                   {/* Stars */}
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(t.rating)].map((_, i) => (
-                      <Star key={i} size={18} className="text-yellow-400" fill="currentColor" />
-                    ))}
-                  </div>
+                  
 
-                  <p className="text-white/90 text-lg leading-relaxed mb-6 italic">
+                  <p className="text-[#1e5799] text-lg leading-relaxed mb-6 italic">
                     "{t.text}"
                   </p>
 
                   <div>
-                    <p className="text-white font-black text-xl">{t.name}</p>
-                    <div className="flex flex-wrap items-center gap-3 mt-2">
-                      <span className="text-blue-200 text-sm">{t.country}</span>
-                      <span className="w-1 h-1 rounded-full bg-blue-400" />
-                      <span className="text-blue-200 text-sm">{t.university}</span>
-                      <span className="w-1 h-1 rounded-full bg-blue-400" />
-                      <span
-                        className="px-3 py-1 rounded-full text-xs font-semibold"
-                        style={{ backgroundColor: "rgba(192,57,43,0.3)", color: "#f2f9f5" }}
-                      >
-                        {t.major}
-                      </span>
-                    </div>
+                    <p className="text-[#1e5799] font-black text-xl">{t.name}</p>
+                   
                   </div>
                 </div>
               </div>

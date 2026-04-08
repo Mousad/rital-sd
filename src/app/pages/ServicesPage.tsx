@@ -3,12 +3,49 @@ import { Link, useNavigate } from "react-router-dom";
 import { ArrowRight, Plus, X } from "lucide-react";
 import { useState } from "react";
 
-
-
+import serivImg from "../pilden/seriv.png";
+ const servicces = [
+    {
+      title: "تقييم شامل للقدرات والمعدل",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7 text-[#0d2b5e]"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+      ),
+    },
+    {
+      title: "معلومات  عن الكليات",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7 text-[#0d2b5e]"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg>
+      ),
+    },
+    {
+      title: "تجهيز المستندات",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7 text-[#0d2b5e]"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
+      ),
+    },
+    {
+      title: "دورات تحضيرية",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7 text-[#0d2b5e]"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+      ),
+    },
+    {
+      title: "توجيه ما بعد القبول",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7 text-[#0d2b5e]"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg>
+      ),
+    },
+    {
+      title: "الكشف الطبي والتنسيق",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7 text-[#0d2b5e]"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg>
+      ),
+    },
+  ];
 const services = [
   // الخدمات الأساسية (للبطاقات التفاعلية)
-  { id: 1, title: "المنح", textColor: "text-[#154734]", link: "/services/scholarships" },
-  { id: 2, title: "شهادات", textColor: "text-[#154734]", link: "/services/certificate-services" },
+  { id: 1, title: "منح دراسية", textColor: "text-[#154734]", link: "/services/scholarships" },
+  { id: 2, title: "استخراج شادات", textColor: "text-[#154734]", link: "/services/certificate-services" },
   { id: 3, title: "الاستشارات", textColor: "text-[#154734]", link: "/services/consultation" },
   { id: 4, title: "الكورسات", textColor: "text-[#154734]", link: "/services/courses" },
   // باقي الخدمات العامة والطلابية كما قبل
@@ -38,18 +75,16 @@ export function ServicesPage() {
       {/* ===== Hero Section ===== */}
       
     <div className="relative h-80 w-full">
-        <img
-          src="	https://rital-sd.com/lovable-uploads/a5c80a15-6935-45ec-8852-551e961cc11f.png"
-          alt="certificate"
-          className="w-full h-full object-cover"
-        />
+     <img
+      src={serivImg}
+      alt="certificate"
+      className="w-full h-full object-cover"
+    />
 
-        <div className="absolute inset-0 bg-black/50"></div>
+    
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
-          <h1 className="text-3xl md:text-2xl font-bold mb-4">
-             خدمات ريتال التعليمية
-          </h1>
+          
 
          
         </div>
@@ -58,26 +93,12 @@ export function ServicesPage() {
      
 
       {/* ===== المؤسسة Section ===== */}
-      <section className="py-20 bg-[#f2f9f5] flex justify-center">
-        <div className="relative w-full max-w-6xl p-1 md:p-10 border-4 border-[#154734] rounded-t-[200px] flex flex-col md:flex-row items-center gap-10 bg-white shadow-lg">
-          <div className="flex-1 flex justify-center">
-           
-          </div>
-          <div className="flex-1 text-center md:text-right">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#000]">
-              مؤسسة <span className="text-[#154734]">ريتال الخدمية</span>
-            </h2>
-            <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-              تقدم المؤسسة جميع الخدمات القانونية في تركيا بجودة ومصداقية عالية...
-            </p>
-          </div>
-        </div>
-      </section>
+     
 
-       {/* ===== Main Services Section ===== */}
-      {/* <section className="py-10 bg-[#f2f9f5]">
+    
+      <section className="py-10 bg-[#f2f9f5]">
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-[#154734]">
+          <h2 className="text-4xl font-bold text-[#0d2b5e]">
             الخدمات الرئيسية
           </h2>
         </div>
@@ -88,34 +109,117 @@ export function ServicesPage() {
               className={`relative p-8 rounded-2xl shadow-xl cursor-pointer hover:scale-105 transition-transform ${service.bg} ${service.textColor}`}
               onClick={() => navigate(service.link)}
             >
-              <h3 className="text-xl font-bold mb-4 text-center">{service.title}</h3>
+              <h3 className="text-xl font-bold mb-4 text-[#0d2b5e]">{service.title}</h3>
             </div>
           ))}
         </div>
-      </section> */}
+      </section>
+        <section className="py-10 relative bg-[#f2f9f5] overflow-hidden">
+  <div className="absolute inset-0 bg opacity-30"></div>
+
+  <div className="container mx-auto relative z- px-2">
+
+    {/* العنوان */}
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold text-[#0d2b5e] mb-6 tracking-tight">
+        خدمات تفصيلية
+      </h2>
+      <p className="text-lg  text-[#0d2b5e] leading-relaxed font-light max-w-2xl mx-auto">
+        نقدم مجموعة متكاملة من الخدمات المصممة خصيصًا لطلاب الجامعات المصرية
+      </p>
+    </div>
+
+    {/* الكروت */}
+    <div className="grid grid-cols-2 gap-4">
+      {servicces.map((servicces, idx) => (
+        <div
+          key={idx}
+          className="bg-white/90 backdrop-blur-sm rounded-1xl p-4 border border-gray-200 hover:border-gray-300 transition-all duration-300 text-center hover:scale-105"
+        >
+          <div className="inline-flex items-center justify-center w-10 h-10 bg-[#0d2b5e]/10 rounded-xl mb-4">
+            {servicces.icon}
+          </div>
+          <h3 className="text-sm font-bold text-[#0d2b5e] mb-2 tracking-tight">
+            {servicces.title}
+          </h3>
+          <p className="text-gray-600 leading-relaxed font-light text-sm">
+            {servicces.desc}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+       <section className="relative pt-32 pb-20 overflow-hidden bg-[#f2f9f5]">
+        <div className="container mx-auto px-4 text-center">
+
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#154734]/10 border border-[#154734]/20 mb-8">
+            <span className="text-sm text-[#0d2b5e] font-medium">
+              التقديم للجامعات المصرية
+            </span>
+          </div>
+
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-[#0d2b5e]">
+            مستقبلك الأكاديمي في مصر
+          </h1>
+
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+            نساعدك على اختيار الكلية المناسبة والتقديم للجامعات الحكومية
+            والخاصة من خلال خدماتنا المتكاملة
+          </p>
+
+        </div>
+      </section>
+
+      <section className="py-9">
+        <div className="container mx-auto px-4">
+
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0d2b5e] mb-6">
+              خدماتنا المتكاملة
+            </h2>
+
+            <p className="text-lg text-gray-600">
+              دعم شامل لضمان نجاح تقديمك للجامعات المصرية
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+
+            <div className="p-6 rounded-xl border hover:shadow-lg">
+              تقديم معلومات تفصيلية عن الكليات والتخصصات
+            </div>
+
+            <div className="p-6 rounded-xl border hover:shadow-lg">
+              تقييم شامل للقدرات والمعدل
+            </div>
+
+            <div className="p-6 rounded-xl border hover:shadow-lg">
+              المساعدة في تجهيز المستندات المطلوبة
+            </div>
+
+            <div className="p-6 rounded-xl border hover:shadow-lg">
+              توفير دورات تحضيرية لاختبارات القدرات
+            </div>
+
+            <div className="p-6 rounded-xl border hover:shadow-lg">
+              توجيه شامل بعد القبول
+            </div>
+
+            <div className="p-6 rounded-xl border hover:shadow-lg">
+              المساعدة في إجراءات الكشف الطبي والتنسيق
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      
 
       {/* ===== Student Services Section ===== */}
-      {/* <section className="py-8 bg-[#f2f9f5]">
-        <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-[#154734]">الخدمات الطلابية</h2>
-        </div>
-        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {services.filter(s => s.id > 6).map((service, index) => (
-            <div
-              key={index}
-              className={`relative p-8 rounded-2xl shadow-xl overflow-hidden ${service.bg} ${service.textColor}`}
-            >
-              <div className="flex justify-center mb-6">
-                <img src={service.icon} alt="service" className="w-20 h-20" />
-              </div>
-              <h3 className="text-xl font-bold mb-4 text-center leading-relaxed">{service.title}</h3>
-              <p className="text-sm leading-relaxed text-center opacity-90">{service.text}</p>
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-white/10 rounded-full"></div>
-              <div className="absolute -top-6 -left-6 w-16 h-16 bg-white/10 rounded-full"></div>
-            </div>
-          ))}
-        </div>
-      </section> */}
+      
+
       <section className="py-20 relative">
   <div className="container mx-auto px-4">
     <div className="space-y-24">

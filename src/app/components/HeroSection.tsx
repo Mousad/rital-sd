@@ -64,7 +64,7 @@ function SearchCard() {
               onChange={handleChange}
             >
               <option value="" className="text-[#1c398e]">اختر الخدمة</option>
-              <option value="scholarship" className="text-[#1c398e]">اﻟﻤﻨﺢ اﻟﺪوﻟﻴﺔ</option>
+              <option value="scholarship" className="text-[#1c398e]">تقديم منح</option>
               <option value="certificate" className="text-[#1c398e]">استخراج شهادات</option>
               
               <option value="consultation" className="text-[#1c398e]">استشارات</option>
