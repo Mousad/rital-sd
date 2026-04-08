@@ -17,11 +17,12 @@ import UniversitiesSlider from "../components/niversitiesSlider";
 import ritalImage from "../pilden/rital.png"
 import ChatBot from "../components/ChatBot";
 import WhyTrueUniv from "../components/WhyTrueUniv";
-import TimelineSection from "../components/TimelineSection"
+
 
 import oom from "../pilden/oom.png";
 import akib from "../pilden/akib.png";
 
+    
 
 
 
@@ -51,7 +52,7 @@ const services = [
   { title: "التقديم على المنح الدراسية", slug: "scholarships" },
   { title: "استخراج تجهيز الشهادات", slug: "CertificateServices" },
   { title: "الاستشارات التعليمية", slug: "Consultation" },
-  { title: "دورات تعليمية ", slug: "Courses" },
+  
 
 ];
 
@@ -69,8 +70,45 @@ export function HomePage() {
       
       <HeroSection />
       <StatsSection />
-      {/* <TimelineSection /> */}
-      
+
+       <section className="py-6 flex justify-center bg-[#f2f9f5]">
+  <div className="relative w-[330px] h-[220px] rounded-3xl overflow-hidden shadow-xl">
+
+    {/* الصورة */}
+    <img
+      src="https://i.pinimg.com/736x/58/cb/bb/58cbbb978738541186bd85e374ece2fb.jpg"
+      alt="الدراسة في الصين"
+      className="w-full h-full object-cover"
+    />
+
+    {/* طبقة تغميق */}
+    <div className="absolute inset-0 bg-black/40"></div>
+
+    {/* النص في وسط الصورة */}
+    <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+
+      <h2 className="text-3xl font-bold text-white mb-3">
+        الدراسة في الصين
+      </h2>
+
+      <p className="text-sm text-gray-200 mb-6">
+        منصة ريتال تساعدك على اختيار أفضل الجامعات والمنح الدراسية في الصين
+        لتضمن مستقبلاً تعليمياً مشرقاً.
+      </p>
+
+      {/* الزر */}
+      <Link
+        to="/study-china"
+        className="bg-[#154734] hover:bg-[#0f3a2a] text-white px-6 py-2 rounded-full transition"
+      >
+        قدم
+      </Link>
+
+    </div>
+
+  </div>
+       </section>
+
       <section className="py-13 flex justify-center bg-[#f2f9f5]">
   <div className="relative bg-[#f2f9f5] rounded-3xl shadow-xl w-[330px] max-w-sm p-4 md:p-6 flex flex-col items-center text-right">
 
@@ -133,44 +171,9 @@ export function HomePage() {
 
   </div>
        </section>
-        <section className="py-6 flex justify-center bg-[#f2f9f5]">
-  <div className="relative w-[330px] h-[220px] rounded-3xl overflow-hidden shadow-xl">
 
-    {/* الصورة */}
-    <img
-      src="https://i.pinimg.com/736x/58/cb/bb/58cbbb978738541186bd85e374ece2fb.jpg"
-      alt="الدراسة في الصين"
-      className="w-full h-full object-cover"
-    />
+       
 
-    {/* طبقة تغميق */}
-    <div className="absolute inset-0 bg-black/40"></div>
-
-    {/* النص في وسط الصورة */}
-    <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-
-      <h2 className="text-3xl font-bold text-white mb-3">
-        الدراسة في الصين
-      </h2>
-
-      <p className="text-sm text-gray-200 mb-6">
-        منصة ريتال تساعدك على اختيار أفضل الجامعات والمنح الدراسية في الصين
-        لتضمن مستقبلاً تعليمياً مشرقاً.
-      </p>
-
-      {/* الزر */}
-      <Link
-        to="/study-china"
-        className="bg-[#154734] hover:bg-[#0f3a2a] text-white px-6 py-2 rounded-full transition"
-      >
-        قدم
-      </Link>
-
-    </div>
-
-  </div>
-       </section>
-      <UniversitiesSlider />
       
 
       <section className="py-10 flex justify-center bg-[#f2f9f5]">
@@ -211,6 +214,7 @@ export function HomePage() {
     </div>
   </div>
       </section>
+      <UniversitiesSlider />
       
        <section className="py-10 bg-[#f2f9f5]">
   <div className="container mx-auto px-4">
@@ -274,35 +278,14 @@ export function HomePage() {
       <ChatBot />
       {/* <AboutSection /> */}
    
-      <ConsultationCTA />
+      {/* <ConsultationCTA /> */}
       {/* <TeamSection /> */}
       {/* <TestimonialsSection /> */}
     
       <ContactSection />
      {/* ======= سكشن موقعنا ======= */}
-<section className="container mx-auto px-4 py-12">
-  {/* العنوان */}
-  <div className="text-center mb-6">
-    <h2 className="text-3xl font-bold text-[#154734]">موقعنا</h2>
-    <p className="text-gray-600 mt-2">
-      زورنا أو تواصل معنا بسهولة من خلال موقعنا على الخريطة
-    </p>
-  </div>
 
-  {/* الخريطة */}
-  <div className="w-full h-[260px] rounded-2xl overflow-hidden shadow-lg">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.470767706833!2d31.201623700000003!3d30.03582399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145847d9cdbfb8b9%3A0x257377c4647e1126!2z2LTYsdmD2Kkg2LHZitiq2KfZhCB8INmE2YTYrtiv2YXYp9iqINin2YTYqti52YTZitmF2YrYqQ!5e1!3m2!1sar!2seg!4v1775573317335!5m2!1sar!2seg"
-      width="100%"
-      height="100%"
-      style={{ border: 0 }}
-      allowFullScreen
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-    ></iframe>
-  </div>
-</section>
-     <BlogSection /> 
+     {/* <BlogSection />  */}
      
 
     </div>

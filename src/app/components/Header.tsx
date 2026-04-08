@@ -26,7 +26,7 @@ export function Header() {
         { label: "خدمات عامة ", to: "#services" },
         { label: "تقديم منح", to: "/services/scholarships/" },
         { label: "استخرج شهادات ثانوي", to: "/services/certificate-services" },
-        { label: "الدورات", to: "/services/courses" },
+        
       ],
     },
     {

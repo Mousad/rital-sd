@@ -50,7 +50,7 @@ function SearchCard() {
   };
 
   return (
-    <div className="w-full flex justify-center px-4">
+    <div className="w-full flex justify-center px-9">
       <div className="bg-black/50 backdrop-blur-md rounded-3xl shadow-lg p-6 w-full max-w-md text-white flex flex-col gap-6">
         <h2 className="text-center text-2xl md:text-3xl font-bold">حقق حلمك الآن</h2>
          
@@ -58,14 +58,14 @@ function SearchCard() {
           <div className="flex items-center gap-3 bg-black/30 rounded-xl px-4 py-2 cursor-pointer hover:bg-black/40">
             <GraduationCap size={20} />
             <select
-              className="bg-{#f2f9f5} w-full text-sm py-1 h-14 outline-none text-white"
+              className="bg-{#f2f9f5} w-full text-sm py-1 h-10 outline-none text-white"
               value={degree}
               onChange={handleChange}
             >
-              {/* <option value="" className="text-[#1c398e]">اختر الخدمة</option> */}
+              <option value="" className="text-[#1c398e]">اختر الخدمة</option>
               <option value="scholarship" className="text-[#1c398e]">اﻟﻤﻨﺢ اﻟﺪوﻟﻴﺔ</option>
               <option value="certificate" className="text-[#1c398e]">استخراج شهادات</option>
-              <option value="courses" className="text-[#1c398e]">دورات تعليمية</option>
+              
               <option value="consultation" className="text-[#1c398e]">استشارات</option>
             </select>
           </div>

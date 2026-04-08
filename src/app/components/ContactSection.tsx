@@ -27,41 +27,35 @@ export function ContactSection() {
     {
       icon: Phone,
       label: "اتصل بنا",
-      value: "+90 123 456 7890",
-      sub: "+90 987 654 3210",
-      color: "#0d2b5e",
+      value: "+20 10 3116 0279 ",
+      sub: "+20 10 3116 0279",
+      color: "#0e243c",
     },
     {
       icon: Mail,
       label: "البريد الإلكتروني",
-      value: "info@ratal-edu.com",
-      sub: "support@ratal-edu.com",
-      color: "#c0392b",
+      value: "Ritaloffice22@gmail.com",
+      sub: "Ritaloffice22@gmail.com",
+      color: "#0e243c",
     },
     {
       icon: MapPin,
       label: "موقعنا",
-      value: "إسطنبول، تركيا",
-      sub: "Beyoglu, Istanbul 34433",
-      color: "#0d2b5e",
+      value: "مصر القاهرة",
+      sub: "٤ محي الدين ابو العز/ الدقي",
+      color: "#0e243c",
     },
-    {
-      icon: MessageSquare,
-      label: "واتساب",
-      value: "+90 555 123 4567",
-      sub: "متاح 24/7",
-      color: "#27ae60",
-    },
+   
   ];
 
   return (
-    <section id="contact" className="py-20 px-4 bg-white">
+    <section id="contact" className="py-20 px-4 bg-[#f2f9f5]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
           <span
             className="inline-block px-5 py-2 rounded-full text-sm font-bold mb-4"
-            style={{ backgroundColor: "#c0392b15", color: "#c0392b" }}
+            style={{ backgroundColor: "#c0392b15", color: "#0e243c" }}
           >
             تواصل معنا
           </span>
@@ -69,61 +63,12 @@ export function ContactSection() {
           <p className="text-gray-500 max-w-xl mx-auto leading-relaxed">
             فريقنا جاهز للإجابة على جميع استفساراتك ومساعدتك في بدء رحلتك التعليمية
           </p>
-          <div className="w-20 h-1 rounded-full mx-auto mt-5" style={{ backgroundColor: "#c0392b" }} />
+          <div className="w-20 h-1 rounded-full mx-auto mt-5" style={{ backgroundColor: "#0e243c" }} />
         </div>
 
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Contact Info */}
-          <div className="lg:w-1/3 space-y-6">
-            {contactInfo.map((item, i) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={i}
-                  className="flex items-start gap-4 p-5 rounded-2xl hover:shadow-md transition-all duration-200"
-                  style={{ border: "1.5px solid #e8ecf0" }}
-                >
-                  <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
-                    style={{ background: `linear-gradient(135deg, ${item.color}15, ${item.color}30)` }}
-                  >
-                    <Icon size={22} style={{ color: item.color }} />
-                  </div>
-                  <div>
-                    <p className="text-gray-400 text-sm mb-1">{item.label}</p>
-                    <p className="font-bold text-gray-900">{item.value}</p>
-                    <p className="text-gray-500 text-sm">{item.sub}</p>
-                  </div>
-                </div>
-              );
-            })}
-
-            {/* Social Links */}
-            <div
-              className="p-5 rounded-2xl"
-              style={{ backgroundColor: "#0d2b5e", border: "1px solid #0d2b5e" }}
-            >
-              <p className="text-white font-bold mb-4">تابعنا على وسائل التواصل</p>
-              <div className="flex gap-3">
-                {[
-                  { label: "فيسبوك", emoji: "📘" },
-                  { label: "إنستغرام", emoji: "📷" },
-                  { label: "يوتيوب", emoji: "📺" },
-                  { label: "تيك توك", emoji: "🎵" },
-                ].map((s, i) => (
-                  <a
-                    key={i}
-                    href="#"
-                    className="w-10 h-10 rounded-xl flex items-center justify-center text-lg hover:scale-110 transition-transform"
-                    style={{ backgroundColor: "rgba(255,255,255,0.1)" }}
-                    title={s.label}
-                  >
-                    {s.emoji}
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
+          
 
           {/* Form */}
           <div className="lg:w-2/3">
@@ -172,61 +117,10 @@ export function ContactSection() {
                       onBlur={(e) => (e.target.style.borderColor = "#e0e0e0")}
                     />
                   </div>
-                  <div>
-                    <label className="block text-gray-700 text-sm font-semibold mb-2">الاسم الأخير *</label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="أدخل اسمك الأخير"
-                      value={form.lastName}
-                      onChange={(e) => setForm({ ...form, lastName: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl outline-none transition-all text-sm"
-                      style={{ border: "1.5px solid #e0e0e0", backgroundColor: "white" }}
-                      onFocus={(e) => (e.target.style.borderColor = "#0d2b5e")}
-                      onBlur={(e) => (e.target.style.borderColor = "#e0e0e0")}
-                    />
-                  </div>
+                 
                 </div>
 
-                {/* Gender & Country Row */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
-                  <div>
-                    <label className="block text-gray-700 text-sm font-semibold mb-2">الجنس *</label>
-                    <select
-                      required
-                      value={form.gender}
-                      onChange={(e) => setForm({ ...form, gender: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl outline-none text-sm"
-                      style={{ border: "1.5px solid #e0e0e0", backgroundColor: "white" }}
-                    >
-                      <option value="">اختر الجنس</option>
-                      <option value="male">ذكر</option>
-                      <option value="female">أنثى</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-gray-700 text-sm font-semibold mb-2">الدولة *</label>
-                    <select
-                      required
-                      value={form.country}
-                      onChange={(e) => setForm({ ...form, country: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl outline-none text-sm"
-                      style={{ border: "1.5px solid #e0e0e0", backgroundColor: "white" }}
-                    >
-                      <option value="">اختر دولتك</option>
-                      <option value="sa">المملكة العربية السعودية</option>
-                      <option value="jo">الأردن</option>
-                      <option value="eg">مصر</option>
-                      <option value="ma">المغرب</option>
-                      <option value="dz">الجزائر</option>
-                      <option value="tn">تونس</option>
-                      <option value="ly">ليبيا</option>
-                      <option value="iq">العراق</option>
-                      <option value="sy">سوريا</option>
-                      <option value="other">أخرى</option>
-                    </select>
-                  </div>
-                </div>
+           
 
                 {/* Email & Phone */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
@@ -248,7 +142,7 @@ export function ContactSection() {
                     <label className="block text-gray-700 text-sm font-semibold mb-2">رقم الهاتف</label>
                     <input
                       type="tel"
-                      placeholder="+966 5XX XXX XXXX"
+                      placeholder="+20 5XX XXX XXXX"
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl outline-none text-sm"
@@ -280,7 +174,7 @@ export function ContactSection() {
                   type="submit"
                   disabled={loading}
                   className="w-full py-4 rounded-2xl text-white font-bold text-lg flex items-center justify-center gap-3 transition-all hover:shadow-xl hover:scale-[1.02] disabled:opacity-70"
-                  style={{ backgroundColor: "#0d2b5e" }}
+                  style={{ backgroundColor: "#154734" }}
                 >
                   {loading ? (
                     <>
@@ -295,12 +189,34 @@ export function ContactSection() {
                   )}
                 </button>
 
-                <p className="text-center text-gray-400 text-sm mt-4">
-                  سنرد على رسالتك خلال 24 ساعة عمل ✉️
+                <p className="text-center text-[#0e243c] text-sm mt-4">
+                  سنرد على رسالتك خلال 24 ساعة عمل 
                 </p>
               </form>
             )}
           </div>
+          <section className="container mx-auto px-4 py-12">
+  {/* العنوان */}
+  <div className="text-center mb-6">
+    <h2 className="text-3xl font-bold text-[#154734]">موقعنا</h2>
+    <p className="text-gray-600 mt-2">
+      زورنا أو تواصل معنا بسهولة من خلال موقعنا على الخريطة
+    </p>
+  </div>
+
+  {/* الخريطة */}
+  <div className="w-full h-[260px] rounded-2xl overflow-hidden shadow-lg">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.470767706833!2d31.201623700000003!3d30.03582399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145847d9cdbfb8b9%3A0x257377c4647e1126!2z2LTYsdmD2Kkg2LHZitiq2KfZhCB8INmE2YTYrtiv2YXYp9iqINin2YTYqti52YTZitmF2YrYqQ!5e1!3m2!1sar!2seg!4v1775573317335!5m2!1sar!2seg"
+      width="100%"
+      height="100%"
+      style={{ border: 0 }}
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</section>
         </div>
       </div>
     </section>

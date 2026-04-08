@@ -4,7 +4,7 @@ import { Footer } from "../components/Footer";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-
+import oolm from "../pilden/oolm.png";
 /* التخصصات */
 const majors = [
   {
@@ -67,10 +67,7 @@ const faqs = [
 
 /* الصفحة */
 export default function ScholarshipsPage() {
-  const images = [
-    "https://i.pinimg.com/736x/40/53/56/4053568214a77cb11b36191712095b81.jpg",
-    "https://www.sabanciuniv.edu/sites/default/files/inline-images/footer2-1.png",
-  ];
+  const images = [oolm, ];
 
   const [currentImage, setCurrentImage] = useState(0);
   const [openFAQ, setOpenFAQ] = useState(null);
@@ -97,9 +94,9 @@ export default function ScholarshipsPage() {
       >
         <div className="absolute inset-0 bg-black/40"></div>
 
-        <h1 className="text-white text-4xl font-bold relative z-10 text-center">
+        {/* <h1 className="text-white text-4xl font-bold relative z-10 text-center">
           الدراسية في الصين 
-        </h1>
+        </h1> */}
       </div>
 
       {/* التعريف */}

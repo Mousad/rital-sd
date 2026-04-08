@@ -3,8 +3,8 @@ import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
-    name: "أحمد الرشيدي",
-    country: "🇸🇦 السعودية",
+    name: "أحمد عثمان",
+    country: "السودان ",
     university: "جامعة إسطنبول",
     major: "هندسة الحاسوب",
     rating: 5,
@@ -75,21 +75,21 @@ export function TestimonialsSection() {
   const t = testimonials[current];
 
   return (
-    <section id="testimonials" className="py-20 px-4 bg-white overflow-hidden">
+    <section id="testimonials" className="py-20 px-4 bg-[#f2f9f5] overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
           <span
             className="inline-block px-5 py-2 rounded-full text-sm font-bold mb-4"
-            style={{ backgroundColor: "#c0392b15", color: "#c0392b" }}
+            style={{ backgroundColor: "#c0392b15", color: "#154734" }}
           >
             آراء طلابنا
           </span>
-          <h2 className="text-4xl font-black text-gray-900 mb-4">شهادات الطلاب</h2>
+          <h2 className="text-4xl font-black text-[#0d2b5e] mb-4">شهادات الطلاب</h2>
           <p className="text-gray-500 max-w-xl mx-auto leading-relaxed">
             اقرأ ما يقوله طلابنا عن تجربتهم مع منصة رتال التعليمية
           </p>
-          <div className="w-20 h-1 rounded-full mx-auto mt-5" style={{ backgroundColor: "#c0392b" }} />
+          <div className="w-20 h-1 rounded-full mx-auto mt-5" style={{ backgroundColor: "#154734" }} />
         </div>
 
         {/* Main Testimonial */}
@@ -107,7 +107,7 @@ export function TestimonialsSection() {
               <div
                 className="absolute top-8 left-8 opacity-20"
               >
-                <Quote size={80} className="text-white" />
+                <Quote size={50} className="text-white" />
               </div>
 
               <div className="flex flex-col md:flex-row gap-8 items-start relative z-10">
@@ -150,7 +150,7 @@ export function TestimonialsSection() {
                       <span className="w-1 h-1 rounded-full bg-blue-400" />
                       <span
                         className="px-3 py-1 rounded-full text-xs font-semibold"
-                        style={{ backgroundColor: "rgba(192,57,43,0.3)", color: "#ff9f8f" }}
+                        style={{ backgroundColor: "rgba(192,57,43,0.3)", color: "#f2f9f5" }}
                       >
                         {t.major}
                       </span>
@@ -161,66 +161,10 @@ export function TestimonialsSection() {
             </div>
           </div>
 
-          {/* Navigation */}
-          <div className="flex items-center justify-between mt-8">
-            <div className="flex gap-2">
-              {testimonials.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrent(i)}
-                  className={`rounded-full transition-all duration-300 ${i === current ? "w-8 h-3 bg-blue-900" : "w-3 h-3 bg-gray-300"}`}
-                />
-              ))}
-            </div>
-            <div className="flex gap-3">
-              <button
-                onClick={() => go(-1)}
-                className="w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all hover:shadow-md"
-                style={{ borderColor: "#0d2b5e", color: "#0d2b5e" }}
-              >
-                <ChevronRight size={20} />
-              </button>
-              <button
-                onClick={() => go(1)}
-                className="w-12 h-12 rounded-full text-white flex items-center justify-center transition-all hover:shadow-md hover:opacity-90"
-                style={{ backgroundColor: "#0d2b5e" }}
-              >
-                <ChevronLeft size={20} />
-              </button>
-            </div>
-          </div>
+         
         </div>
 
-        {/* Mini Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-14">
-          {testimonials.slice(0, 3).map((test, i) => (
-            <div
-              key={i}
-              className="p-6 rounded-2xl bg-white border hover:shadow-lg transition-all duration-200"
-              style={{ borderColor: "#e8ecf0" }}
-            >
-              <div className="flex gap-1 mb-3">
-                {[...Array(test.rating)].map((_, j) => (
-                  <Star key={j} size={14} className="text-yellow-400" fill="currentColor" />
-                ))}
-              </div>
-              <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
-                "{test.text.substring(0, 120)}..."
-              </p>
-              <div className="flex items-center gap-3">
-                <img
-                  src={test.image}
-                  alt={test.name}
-                  className="w-10 h-10 rounded-full object-cover"
-                />
-                <div>
-                  <p className="font-bold text-gray-900 text-sm">{test.name}</p>
-                  <p className="text-gray-400 text-xs">{test.country}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+       
       </div>
     </section>
   );

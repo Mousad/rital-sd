@@ -5,23 +5,16 @@ import { TeamSection } from "../components/TeamSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import EgyptMap from "../components/EgyptMap";
-
+import { ContactSection } from "../components/ContactSection";
 import buack from "/src/app/pilden/buack.jpg";
 import documVideo from "/src/app/pilden/docum.mp4";
-
+import TimelineSection from "../components/TimelineSection"
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-[#f0f7f3]">
 
       {/* ===== Back Button ===== */}
-      {/* <div className="sticky top-[60px] z-10 px-4 py-2">
-  <Link
-    to="/"
-    className="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-md text-[#154734] hover:text-[#0f2d1f]"
-  >
-    <ArrowRight className="w-5 h-5" />
-  </Link>
-</div> */}
+     
 
       {/* ===== Hero Section ===== */}
       <header
@@ -78,6 +71,8 @@ export default function AboutPage() {
 
   </div>
       </section>
+      <TimelineSection />
+
 
        <section className="py-6 bg-[#f2f9f5]">
   <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
@@ -263,6 +258,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <ContactSection />
 
       
 

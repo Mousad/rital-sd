@@ -67,7 +67,7 @@ function StatCard({ stat, index, inView }: { stat: typeof stats[0]; index: numbe
         className="w-10 h-10 rounded-2xl flex items-center justify-center mb-5 transition-all duration-300 group-hover:scale-110"
         style={{ background: `linear-gradient(135deg, ${stat.color}15, ${stat.color}30)` }}
       >
-        <Icon size={26} style={{ color: stat.color }} strokeWidth={1} />
+        <Icon size={23} style={{ color: stat.color }} strokeWidth={1} />
       </div>
       <div
         className="text-2xl font-black mb-2"
@@ -75,8 +75,8 @@ function StatCard({ stat, index, inView }: { stat: typeof stats[0]; index: numbe
       >
        {count.toLocaleString("en-US")}{stat.suffix}
       </div>
-      <h3 className="text-gray-800 font-bold text-xl mb-2">{stat.label}</h3>
-      {/* <p className="text-gray-500 text-sm leading-relaxed">{stat.description}</p> */}
+      <h3 className="text-gray-800 font-bold text-x mb-2">{stat.label}</h3>
+      <p className="text-gray-500 text-sm leading-relaxed">{stat.description}</p>
     </div>
   );
 }
