@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { GraduationCap } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import backImage from "/src/app/pilden/baks.jfif";
-import bsnkImage from "/src/app/pilden/bsnk.jpg";
-import akibImage from "/src/app/pilden/akib.jfif";
+import backImage from "@/app/pilden/baks.jfif";
+import bsnkImage from "@/app/pilden/bsnk.jpg";
+import akibImage from "@/app/pilden/akib.jfif";
 // import buackImage from "/src/app/pilden/buack.jpg";
 
 const heroSlides = [
