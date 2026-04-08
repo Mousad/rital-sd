@@ -3,24 +3,25 @@ import { GraduationCap } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import backImage from "@/app/pilden/baks.jfif";
 import bsnkImage from "@/app/pilden/bsnk.jpg";
-import akibImage from "@/app/pilden/akib.jfif";
+import akibImage from "@/app/pilden/akib.png";
+
 // import buackImage from "/src/app/pilden/buack.jpg";
 
 const heroSlides = [
   {
-    image: "/src/app/pilden/baks.jfif",
+    image: backImage,
     headline: "ابدأ رحلتك التعليمية بثقة مع ريتال",
     subheadline:
       "منصة ريتال ترشدك خطوة بخطوة لاختيار أفضل المنح الدراسية والجامعات حول العالم، لتضمن مستقبلاً تعليمياً مشرقاً مليئاً بالفرص.",
   },
   {
-    image: "/src/app/pilden/bsnk.jpg",
+    image: bsnkImage,
     headline: "انضم لمجتمع ريتال من الطلاب الناجحين",
     subheadline:
       "أكثر من 5000 طالب حققوا أهدافهم التعليمية بمساعدة ريتال، لتكون أنت التالي الذي يحقق أحلامه بثقة وسهولة.",
   },
   {
-    image: "/src/app/pilden/akib.png",
+    image: akibImage,
     headline: "أفضل الجامعات العالمية في متناول يديك",
     subheadline:
       "اكتشف برامج دراسية معتمدة دولياً عبر ريتال، بتكاليف مناسبة ودعم كامل لتجربة تعليمية سلسة وموثوقة.",
